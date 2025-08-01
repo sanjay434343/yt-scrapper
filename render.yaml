@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: youtube-downloader-api
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
